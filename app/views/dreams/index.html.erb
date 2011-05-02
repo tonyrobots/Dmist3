@@ -1,0 +1,10 @@
+<h1>Dreams#index</h1>
+
+<table>
+<% @dreams.each do |dream| %>
+	<% next if dream.visible == FALSE %>
+	<tr class="<%= cycle("even", "odd") %>">
+        <td> <%= link_to(dream.title, dream_path) %> </td>
+	</tr>
+<% end %>
+</table>

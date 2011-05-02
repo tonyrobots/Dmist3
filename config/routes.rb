@@ -1,6 +1,7 @@
 Dream3::Application.routes.draw do
-  
+
   devise_for :users
+  resources :dreams
 
   root :to => "home#index"
   
