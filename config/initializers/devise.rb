@@ -139,4 +139,5 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
+  config.omniauth :facebook, "180960428585498", "2286246afc4f8ed792e784dd4e5c809e"
 end
