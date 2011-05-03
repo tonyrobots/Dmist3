@@ -1,14 +1,13 @@
 body { 
 	font-family: "Helvetica", 'Arial', sans-serif;
 	line-height: 1.4;
-	color: #555753; 
+	color: #111144; 
     background-image: url(/images/stripe_bg2.png);
 	}
 h1 {
-	font-size: 150%;
+	font-size: 200%;
 	font-weight: bold;
-	font-variant: small-caps;
-	letter-spacing: 3px;
+	color:#151361;
 }
 h3 { 
 	font-style: italic;
@@ -49,9 +48,28 @@ legend {
 	-webkit-border-radius: 20px; -moz-border-radius: 20px;
 }
 
-#header {
+#logo {
 	position: relative;	
 	top: -59px;
+}
+
+#logotype {
+	position: relative;	
+	top: -60px;
+	background: #fff;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+	padding: 10px;
+	width: 300px;
+	font-size:36pt;	
+}
+
+#topnav {
+	position: absolute;
+	top: 32px;
+	left: 600px;
+	background: #fff;
+	-webkit-border-radius: 10px; -moz-border-radius: 10px;
+	padding: 10px;
 }
 
 #contentcolumn {
