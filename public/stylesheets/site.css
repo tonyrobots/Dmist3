@@ -1,0 +1,134 @@
+body { 
+	font-family: "Helvetica", 'Arial', sans-serif;
+	line-height: 1.4;
+	color: #555753; 
+    background-image: url(/images/stripe_bg2.png);
+	}
+h1 {
+	font-size: 150%;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+h3 { 
+	font-style: italic;
+	font-size: 1.5em;
+	letter-spacing: 1.2px; 
+	margin-bottom: 0; 
+	}
+	
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #151361;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #151361;
+	}
+a:hover, a:active { 
+	text-decoration: underline; 
+	background-color: #fff;
+	}
+fieldset {
+	background: #ddd;;
+}
+legend {
+	color: #fff;
+	background: #444;
+	padding: .4em 1em;
+	-webkit-border-radius: 8px; -moz-border-radius: 8px;
+}
+#container {
+	width: 904px;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 65px;
+	padding-left: 30px;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+}
+
+#header {
+	position: relative;	
+	top: -59px;
+}
+
+#contentcolumn {
+	width: 538px;
+	float: left;
+}
+
+#rightcolumn {
+	float:right;
+	width: 330px;
+	padding: 18px;
+	text-align:left;
+}
+
+#footer {
+	clear:both;
+	font-size:9pt;
+	text-align:center;
+	margin-top: 20px;
+}
+
+#search {
+	float:right;
+	margin-right: 30px;
+}
+
+
+td {
+	padding:3px;
+}
+
+tr.odd {
+	background-color: #aaa;
+}
+tr.even {
+	background-color: #ddd;
+}
+#debug {
+    background: #ddd;
+	border: solid 2px;
+	border-color: #444;
+	width: 900px;
+	padding: 5px 20px;
+	margin: 0 auto;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+}
+#userstats {
+	font-size: 9pt;
+	border: 1px solid;
+}
+#flash {
+	color: #B43530;
+	font-weight: bold;
+}
+#ratings {
+	background-color:#DDD;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	padding-top: 2px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+#subline {
+	color:#666;
+	font-size: 9pt;
+	font-style: italic;
+}
+#comment {
+	background-color:#000;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 32px;
+
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+
+
+* html #footer {
+		height:1px;
+	}

@@ -1,0 +1,33 @@
+<h1> <%=h @user.username %><br /></h1>
+
+<div id="contentcolumn">
+
+<% unless @dreams.blank? %>
+ 	<b><%=h @user.username %>'s dreams:</b>
+	<%= render :partial => "dreams/dreamlist", :dreams => @dreams  %>
+<% else %>
+	You haven't recorded any dreams yet! Why not <%= link_to "add one now", new_dream_path %>? No time like the present!
+<% end %>
+</div>
+<div id="rightcolumn">
+	<% if user_signed_in? && current_user.id == @user.id %>
+		<p>This is your own profile, and things only you can do, like edit it,
+		 and change settings, etc will be available here.</p>
+	
+	<div id="userstats">
+	  <b>Login count:</b> <%=h @user.sign_in_count %><br />
+	  <b>Last login at:</b>
+	  <%=h @user.last_sign_in_at %>
+	  <br />
+	  <b>Current login at:</b>
+	  <%=h @user.current_sign_in_at %>
+	  <br />
+	  <b>Last login ip:</b>
+	  <%=h @user.last_sign_in_ip %>
+	  <br />
+	  <b>Current login ip:</b>
+	  <%=h @user.current_sign_in_ip %>
+ 	 </div>
+	 	
+	<% end %>
+</div>

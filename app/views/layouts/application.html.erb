@@ -1,16 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Dream3</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<%= yield %>
+       <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+       <head>
+         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	      <title><%= @title + " // " if @title %>dreamerist: a site for dreams</title>
+	      <%= stylesheet_link_tag "site" %>
+		  <%= javascript_include_tag :defaults %>
+		  <%= csrf_meta_tag %>
+		  <%  #ajaxful_rating_style %>
 
-</body>
+		 <meta name="google-site-verification" content="1Bgq--jdydoRuZnCzirtpsf-41zDzSfvc5Jelkt36Ss" />
+	     </head>
+	     <body>
+         <%= render :partial => "/home/ga" %>
+	     <div id="container">
+	     <div id="header">
+	       <%= link_to(image_tag("logo_tab.png", :border =>0), root_path) %>
+	     </div>
+
+		 <div id="topnav">
+		 	<%= link_to_unless_current("Home", root_path) %> |
+		 	<%= link_to_unless_current("Add Dream", new_dream_path) %> |
+
+			<%  if !current_user %>
+			  <%= link_to "Register", new_user_registration_path  %> |
+			  <%= link_to "Log In", new_user_session_path  %> |	
+			  <fb:login-button autologoutlink="true"></fb:login-button>
+			<% else %>
+			  <%= link_to "My Profile", current_user %> |
+			  <%= link_to "Logout", destroy_user_session_path, :confirm => "Are you sure you want to logout?" %>
+			<% end %>
+    			
+
+		    <div id="fb-root"></div>
+ <script>
+      window.fbAsyncInit = function() {
+        FB.init({appId: '180960428585498', status: true, cookie: true,
+                 xfbml: true});
+      };
+      (function() {
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }());
+    </script>
+
+			
+	        <div id="search">
+				SEARCH TK
+			</div>
+		 </div>
+	  
+
+	    <div id="flash">
+		  <p><%= flash[:notice] %></p>
+		  <p><%= flash[:alert] %></p>
+		</div>
+         
+	     <%= yield %>
+		 
+		 <div id="footer">footer</div>
+         </div>
+		
+	     <% if ENV["RAILS_ENV"] == "development" %>
+		 <div id="debug">
+		   <i>debugging info, only appears in development environment</i>
+	       <%= debug(params) %>
+		 </div>
+	     <% end %>
+   
+    </body>
 </html>
+

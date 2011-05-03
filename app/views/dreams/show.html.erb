@@ -16,34 +16,20 @@
 	</p>
 	<div id="tags">
 	Tags:
-	<%= render :partial => "tag_list" %>
-		<br />
-		
-		<%= form_remote_tag :url => {:controller => :dream, :action => 'addTag'},:update => "taglist"  %>
-		<%= hidden_field_tag(:dream_id, @dream.id) %>
-   		<%= text_field_tag :tag %>
-		<%= submit_tag "Add tag" %>
-		</form>
 
 	</div>
 </div>
 	
 <div id="rightcolumn">
-	<% 	if currentUserId(current_user) == @dream.user_id %>
-	    <%= link_to image_tag("edit.png", :border =>0,  :alt => "Edit Dream"), { :controller => "dream", :action => "edit", :id => @dream.id } %>
-		<%=	link_to(image_tag("delete.png", :border =>0,  :alt => "Delete Dream"), { :controller => "dream", :action => "delete", :id => @dream.id }) %>
-		<%	end %>
+	<% 	if current_user_is?(@dream.user_id) %>
+	    <%= link_to image_tag("edit.png", :border =>0,  :alt => "Edit Dream"), edit_dream_path(@dream.id) %>
+		<%=	link_to(image_tag("delete.png", :border =>0,  :alt => "Delete Dream"), @dream, :method => :delete) %>
+	<%	end %>
 	<p><fb:like></fb:like></p>
 	<div id="ratings" >
 		<% unless current_user %><b> You must be <%= link_to "logged in", new_user_session_path %> to rate dreams!</b><% end %>
 		
-		<h3>Ratings:</h3>
-		<b>Interestingness:</b><br />
-		<%= ratings_for @dream, :dimension => :interestingness %>
-		<b>Weirdness:</b><br />
-		<%= ratings_for @dream, :dimension => :weirdness %>
-		<b>Writing:</b><br />
-		<%= ratings_for @dream, :dimension => :writing %>
+
 	</div>
 	<div id="commentarea">
 

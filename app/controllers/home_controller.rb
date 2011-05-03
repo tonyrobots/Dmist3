@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    #@dreams = Dream.all
+    @dreams = Dream.all
   end
   
 end

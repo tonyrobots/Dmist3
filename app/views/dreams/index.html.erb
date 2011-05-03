@@ -4,7 +4,7 @@
 <% @dreams.each do |dream| %>
 	<% next if dream.visible == FALSE %>
 	<tr class="<%= cycle("even", "odd") %>">
-        <td> <%= link_to(dream.title, dream_path) %> </td>
+        <td> <%= link_to(dream.title, dream) %> </td>
 	</tr>
 <% end %>
 </table>
