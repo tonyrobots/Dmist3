@@ -1,17 +1,75 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
+--- 
+dream_00001: 
+  body: This is the first dream, again.
+  created_at: 2011-05-02 22:55:57.700771 Z
+  date: 
+  explicit: false
+  hidden: 
+  id: 1
+  location: 
+  title: first dream
+  updated_at: 2011-05-03 18:41:59.914867 Z
   user_id: 1
-  title: MyString
-  body: MyText
+  visible: true
+dream_00002: 
+  body: Last night I dreamed of fishes wearing glasses. It was cool. FADSFSD
+  created_at: 2011-05-03 17:07:47.691132 Z
   date: 2011-05-02
-  visible: false
-  location: MyString
-
-two:
+  explicit: 
+  hidden: 
+  id: 2
+  location: 
+  title: Fishes
+  updated_at: 2011-05-03 18:23:38.785370 Z
   user_id: 1
-  title: MyString
-  body: MyText
+  visible: 
+dream_00003: 
+  body: dfdkjshfajksdhfjksdfjkldhfjdshjkfandskf poof
+  created_at: 2011-05-03 18:19:47.227639 Z
   date: 2011-05-02
-  visible: false
-  location: MyString
+  explicit: 
+  hidden: 
+  id: 3
+  location: 
+  title: casino soul
+  updated_at: 2011-05-03 18:28:40.329609 Z
+  user_id: 2
+  visible: 
+dream_00004: 
+  body: |-
+    I was chosen to ride on the space shuttle. I worked for nasa, in the office. Our offices were moving soon, some people wanted to use this shuttle run to help move. I packed up my stuff but didn't want to keep any office supplies -- i wasn't personally attached to any of them and i figured they would give me good office supplies at the new place.
+    
+    Inside the shuttle: 
+    Not what I would expect. I was alone, lying on the floor of a smallish (maybe 10' x 10') room. There was a thick glass window covering one wall, but for some reason I couldn't see out of it unless I crawled very close to it and looked out. (I did not stand or walk on the space shuttle. Only lied and crawled.) I remember there was some sort of bet in place whose outcome was based on the shuttle's precise course/orientation. (e.g. whose marble will roll to a wall first? This is perhaps what they consider a space shuttle "experiment.") Updates were made on a PA system concerning this bet. I laid there for a while, feeling motion, imagining we were probably out in space. So I crawled to the window wall to get a closer look. I was afraid to lean on it, but re-assured myself that they probably make space shuttle windows pretty tough. I looked out and saw we were indoors, just inches below a ceiling in fact. Some sort of factory-esque place. Soon we landed.
+    
+    One of my co-travellers was exiting the shuttle with me. (Once again, the interior of the shuttle was seemingly a vast array of plain rectangular rooms. More like an office building.) He had been using the trip to help move, and was pushing along a cardboard box full of office supplies. As we walked out, we came across an official-looking guy; he started pointing at me. I thought I was busted for some reason, and wouldn't be allowed back on the shuttle. We kept walking towards him, and when we were close enough he said "You! I recognize that name." (I was wearing a name tag, perhaps? ID badge?) "Where were you on the last one? The M. Night Shamalyan one?" (Apparently M. Night Shamalyan got to ride the shuttle last time.) "I wasn't there. This is my first one." "Oh. I recognized the name..."
+    
+    We walked on. When we emerged at a giant parking lot, and my colleauge began emptying his box into a car trunk, I dared ask the question that was on my mind. "Are we actually going to leave the atmosphere? Or is the whole trip just indoors and between cities?"
+    
+    "We do hit FS-zero (?) on the way to Pennsylvania, that's a supersonic, above-the-atmosphere leg."
+    
+    "But we don't see, like, 'space'."
+    
+    "No. This trip is just to recalibrate the network. New york does the garage stuff, Kansas does the God stuff."
+  created_at: 2011-05-03 18:43:24.690825 Z
+  date: 2006-12-31
+  explicit: 
+  hidden: 
+  id: 4
+  location: 
+  title: Space Shuttle
+  updated_at: 2011-05-03 18:43:24.690825 Z
+  user_id: 1
+  visible: 
+dream_00005: 
+  body: ooohohohohoh
+  created_at: 2011-05-03 22:12:49.863130 Z
+  date: 2011-05-02
+  explicit: 
+  hidden: 
+  id: 5
+  location: 
+  title: Facebook dream
+  updated_at: 2011-05-03 22:12:59.684348 Z
+  user_id: 4
+  visible: 

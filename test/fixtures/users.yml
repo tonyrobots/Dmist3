@@ -1,11 +1,61 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+--- 
+user_00001: 
+  confirmation_sent_at: 
+  confirmation_token: 
+  confirmed_at: 
+  created_at: 2011-05-02 22:59:34.106534 Z
+  current_sign_in_at: 2011-05-03 22:26:41.869390 Z
+  current_sign_in_ip: 127.0.0.1
+  email: tonyzito@gmail.com
+  encrypted_password: $2a$10$5Y6J6qps2l1/rhBv31vW.uimind0WSw2jAliWLSzuBqKKys1K9uYG
+  fbid: 500085643
+  id: 1
+  last_sign_in_at: 2011-05-03 22:23:43.611849 Z
+  last_sign_in_ip: 127.0.0.1
+  password_salt: $2a$10$5Y6J6qps2l1/rhBv31vW.u
+  remember_created_at: 
+  remember_token: 
+  reset_password_token: 
+  sign_in_count: 19
+  updated_at: 2011-05-03 22:26:41.869965 Z
+  username: tonyrobots
+user_00002: 
+  confirmation_sent_at: 
+  confirmation_token: 
+  confirmed_at: 
+  created_at: 2011-05-03 15:58:29.024055 Z
+  current_sign_in_at: 2011-05-03 18:18:51.153442 Z
+  current_sign_in_ip: 127.0.0.1
+  email: tonyzito+cs@gmail.com
+  encrypted_password: $2a$10$fx/gMHCdDdVJtvHnxd2QSu6Yfyjx2B8P5Re2U9j8IDKPQK0.1POKa
+  fbid: 
+  id: 2
+  last_sign_in_at: 2011-05-03 15:58:29.032920 Z
+  last_sign_in_ip: 127.0.0.1
+  password_salt: $2a$10$fx/gMHCdDdVJtvHnxd2QSu
+  remember_created_at: 
+  remember_token: 
+  reset_password_token: 
+  sign_in_count: 2
+  updated_at: 2011-05-03 18:29:49.307436 Z
+  username: casinosoul
+user_00004: 
+  confirmation_sent_at: 
+  confirmation_token: 
+  confirmed_at: 
+  created_at: 2011-05-03 22:11:29.894494 Z
+  current_sign_in_at: 2011-05-03 22:21:31.085120 Z
+  current_sign_in_ip: 127.0.0.1
+  email: tonyzito+fb@gmail.com
+  encrypted_password: $2a$10$2.lWXiYrIHFR3UhJSGESu.YF834WaHKbSO0BaMjwC/k.H6cHAMoFy
+  fbid: 500085643
+  id: 4
+  last_sign_in_at: 2011-05-03 22:19:40.950762 Z
+  last_sign_in_ip: 127.0.0.1
+  password_salt: ""
+  remember_created_at: 
+  remember_token: 
+  reset_password_token: 
+  sign_in_count: 3
+  updated_at: 2011-05-03 22:23:20.285816 Z
+  username: tonyzito
