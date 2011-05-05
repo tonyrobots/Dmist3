@@ -41,6 +41,9 @@ class DreamsController < ApplicationController
   
   def show
     @dream = Dream.find(params[:id])
+    @commentable = @dream
+    @comments = @dream.comments.all
+    @comment = Comment.new
   end
   
   def destroy

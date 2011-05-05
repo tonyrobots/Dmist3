@@ -1,0 +1,36 @@
+ <h3>Comments:</h3>
+  <% for comment in @dream.comments %>
+    <div class="comment">
+    <% if @dream.comments.index(comment) == @dream.comments.length-1 %> 
+  <!-- This is our new comment -->
+  <p id="new_comment">
+<% else %>
+     <p>
+    <% end %>
+
+    <%= sanitize(comment.body,:tags => %w(b i u)) %><br />
+      <class id="subline">by <%= getUsernameLinkById(comment.user_id) %>, <%= time_ago_in_words(comment.created_at) %> ago</class>
+     </p>
+   
+    </div>
+  <% end %>
+    <!-- maybe make this only appear on click later -->
+    <% if user_signed_in? %>
+            <%= form_for(@comment) do |f| %>
+            <fieldset>
+                <legend>Add Comment</legend>
+                <%= text_area :comment, :body, :cols => 32, :rows => 4 %>
+				<% # TODO : there must be a better way to use polymorphic relationship than these hidden fields %>
+				<%= f.hidden_field(:commentable_id, :value=> @commentable.id) %>
+                <%= f.hidden_field(:commentable_type, :value=> @commentable.class.name) %>
+
+				<p>
+                <%= submit_tag 'Add Comment' %>
+                </p>
+            </fieldset>
+            <% end %>
+    <% else %>
+            <b> You must be <%= link_to "logged in", new_user_session_path %> to comment!</b>
+    <% end %>
+
+

@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :username, :password, :password_confirmation, :remember_me
   
+  has_many :comments, :as => :commentable  
+  
   has_many :dreams
   validates_format_of :username,
                       :with => /^[A-Z0-9_]*$/i,
