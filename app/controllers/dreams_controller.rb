@@ -40,8 +40,7 @@ class DreamsController < ApplicationController
   end
   
   def show
-    @dream = Dream.find(params[:id])
-    @commentable = @dream
+    @commentable = @dream = Dream.find(params[:id])
     @comments = @dream.comments.all
     @comment = Comment.new
   end

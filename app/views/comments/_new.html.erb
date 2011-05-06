@@ -1,8 +1,7 @@
-<%= link_to "Add comment", "#" %>
 <div class = "comment_form">
  <!-- maybe make this only appear on click later -->
    <% if user_signed_in? %>
-           <%= form_for @comment, :remote => true do |f| %>
+           <%= form_for Comment.new, :remote => true do |f| %>
            <fieldset>
                <legend>Add Comment</legend>
                <%= text_area :comment, :body, :cols => 32, :rows => 4 %>

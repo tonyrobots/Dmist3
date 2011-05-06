@@ -1,0 +1,9 @@
+ <h3>Comments:</h3>
+<span id="comments_count"><%= pluralize(@commentable.comments.count, "Comment") %></span>
+<div id="comment-notice"></div>
+
+   <%= render "comments/new" %>
+
+<div id="comments">
+   <%= render @commentable.comments %>
+</div>
