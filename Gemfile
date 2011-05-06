@@ -8,6 +8,8 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'devise', '1.3.4'
 gem "oa-oauth", :require => "omniauth/oauth"
+gem 'jquery-rails', '>= 0.2.6'
+
 
 
 # Use unicorn as the web server

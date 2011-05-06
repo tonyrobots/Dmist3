@@ -4,10 +4,11 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to(request.referer, :notice => 'Response added.') }
-        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
+        @commentable = @dream = Dream.find(params[:comment][:commentable_id])
+        format.html { redirect_to(request.referer, :notice => 'Thanks for commenting!') }
+        format.js
       else
-        format.html { redirect_to(request.referer, :notice => 'Response failed to save.') }
+        format.html { redirect_to(request.referer, :notice => 'Comment failed to save.') }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
     end
