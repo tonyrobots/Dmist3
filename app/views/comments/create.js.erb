@@ -5,10 +5,14 @@ $("#comment-notice").html('<div class="flash notice"><%= escape_javascript(flash
 // $("#comment_form").hide;
 
 /* Replace the count of comments */
-$("#comments_count").html("<%= pluralize(Comment.count, 'Comment') %>");
+$("#comments_count").html("<%= pluralize(@commentable.comments.count, 'Comment') %>");
 
-/* add new comment on top */
-$("<%= escape_javascript(render(@comment)) %>").prependTo("#comments");
+/* add new comment on top, if new comment */
+<% unless @comment.body.blank? %>
+
+$("<%= escape_javascript(render(@comment)) %>").prependTo("#comments");  
+ 
+<% end %>
 
 /* clear the comment form */
 $("#new_comment")[0].reset();

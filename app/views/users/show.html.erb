@@ -30,4 +30,7 @@
  	 </div>
 	 	
 	<% end %>
+	<div id="commentarea">
+		<%= render "comments/comments_list", :locals => { :commentable => @commentable } %>
+	</div> <!-- end commentarea -->
 </div>
