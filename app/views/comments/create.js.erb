@@ -2,7 +2,8 @@
 $("#comment-notice").html('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
 
 /* Hide the comment form */
-// $("#comment_form").hide;
+$('#comment_form').hide('slow');
+
 
 /* Replace the count of comments */
 $("#comments_count").html("<%= pluralize(@commentable.comments.count, 'Comment') %>");
