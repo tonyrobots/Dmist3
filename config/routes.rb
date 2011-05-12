@@ -4,7 +4,7 @@ Dream3::Application.routes.draw do
   resources :dreams do
     
   end
-  resources :tags, :only => [:create, :destroy]
+  resources :tags, :only => [:create, :destroy, :show]
   resources :comments
   resources :users
 

@@ -14,10 +14,6 @@ module ApplicationHelper
        current_user.id == id
      end
    end
-   
-
-
-
 
   def dreamDate(dream)
     if dream.date
