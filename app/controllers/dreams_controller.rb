@@ -43,6 +43,7 @@ class DreamsController < ApplicationController
     @commentable = @dream = Dream.find(params[:id])
     @comments = @dream.comments.all
     @comment = Comment.new
+    @dream_tag = @dream.tags.build
   end
   
   def destroy
@@ -56,6 +57,11 @@ class DreamsController < ApplicationController
        flash[:notice] = "Delete failed. You have no right to go around stomping on other people's dreams."
        redirect_to request.referrer
      end
-   end
-
+  end
+   
+  def add_tag
+     @dream = Dream.find(params[:id])
+     @dream.tag_list.add(params[:name])
+     @dream.save
+  end
 end

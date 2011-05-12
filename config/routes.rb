@@ -1,10 +1,11 @@
 Dream3::Application.routes.draw do
 
-  #devise_for :views
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :dreams
+  resources :dreams do
+    
+  end
+  resources :tags, :only => [:create, :destroy]
   resources :comments
-
   resources :users
 
   root :to => "home#index"

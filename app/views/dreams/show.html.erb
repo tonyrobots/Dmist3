@@ -12,11 +12,21 @@
 	</i>
 	
 	<p>  
-	  <%= simple_format(sanitize(@dream.body,:tags => %w(b i u))) %>
+	<%= simple_format(sanitize(@dream.body,:tags => %w(b i u))) %>
 	</p>
-	<div id="tags">
+	<div id="tagarea">
 	Tags:
-
+	<div id="tags">
+		<%= show_tags(@dream) %>
+	</div>
+	<br />
+    Add a tag:
+ 	<%= form_tag({:action=>"create", :controller=>"tags"}, :method => "post") do %>
+		<%= text_field_tag(:name) %>
+		<%= hidden_field_tag(:dream_id, @dream.id) %>
+		<%= submit_tag %>
+	<% end%>
+    
 	</div>
 </div>
 	

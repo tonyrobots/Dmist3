@@ -5,4 +5,7 @@ class Dream < ActiveRecord::Base
   #accepts_nested_attributes_for :comments
   
   validates_presence_of :title, :body
+  
+  acts_as_taggable_on :tags
+  
 end
