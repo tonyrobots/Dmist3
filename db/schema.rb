@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507032318) do
+ActiveRecord::Schema.define(:version => 20110513193214) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -38,12 +38,13 @@ ActiveRecord::Schema.define(:version => 20110507032318) do
     t.string   "title"
     t.text     "body"
     t.date     "date"
-    t.boolean  "visible"
+    t.boolean  "visible",    :default => true
     t.boolean  "explicit"
-    t.boolean  "hidden"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "feeling",    :default => 3
+    t.boolean  "private",    :default => false
   end
 
   create_table "taggings", :force => true do |t|
@@ -82,6 +83,10 @@ ActiveRecord::Schema.define(:version => 20110507032318) do
     t.datetime "updated_at"
     t.string   "username"
     t.integer  "fbid"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

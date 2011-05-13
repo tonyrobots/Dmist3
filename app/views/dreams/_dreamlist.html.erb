@@ -2,25 +2,20 @@
 <table width="100%">
 	
 <% @dreams.each do |dream | %>
-    <% next if dream.visible == FALSE %>
 	<tr class="<%= cycle("even", "odd") %>">
 	<td>
 	
 	<% 	if current_user_is?(dream.user_id) %>
 		<%=	link_to(image_tag("delete.png", :border =>0, :size =>"24x24", :alt => "Delete Dream", :title => "Delete Dream" ), dream_path(dream.id), :method => :delete, :confirm => "Are you sure you want to delete this dream?") %>
 	    <%= link_to image_tag("edit.png", :border =>0, :size =>"24x24", :alt => "Edit Dream", :title => "Edit Dream" ), edit_dream_path(dream.id) %>
+	    <% if dream.private %>PRIVATE!<% end %>
 	<%	end %></td>
+	<td align=center>
+		<%= avatar_thumb_linked(dream.user_id) %>
+	</td>
 	<td><b><%= link_to(dream.title, dream) %></b>
-	 by 
-		<% if (dream.user_id == -1) then %> unknown 
-		<% else %>
-		<%= getUsernameLinkById(dream.user_id) %>
-		<% end %>
 	
-	<i>(<%=h time_ago_in_words(dream.created_at) %> ago)</i>
-	
-
-			
+		<i>(<%=h time_ago_in_words(dream.created_at) %> ago)</i>
 	</td>
 <% end %>
 </table>

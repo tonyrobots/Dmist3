@@ -10,6 +10,10 @@
 <% end %>
 </div>
 <div id="rightcolumn">
+	<div id="profile_avatar">
+		<%= image_tag @user.avatar.url(:large) %>
+	</div>
+		
 	<% if user_signed_in? && current_user.id == @user.id %>
 		<p>This is your own profile, and things only you can do, like edit it,
 		 and change settings, etc will be available here.</p>

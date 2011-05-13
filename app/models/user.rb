@@ -5,11 +5,19 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar
   
   acts_as_tagger
     
   has_many :comments, :as => :commentable  
+  
+  # use paperclip for avatars
+   has_attached_file :avatar, :styles => { :large => "325x325>", :medium => "200x200>", :thumb => "48x48#" },
+                                           :url => "/images/:attachment/:id/:style_:id.:extension",
+                                           :path => ":rails_root/public/images/:attachment/:id/:style_:id.:extension",
+                                           :default_style => :thumb,
+                                           :default_url => "/images/avatars/:style_missing.png"
+
   
   has_many :dreams
   validates_format_of :username,
@@ -20,6 +28,7 @@ class User < ActiveRecord::Base
                       
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
+    # if user already exists in database, just add the fbid and successfully authenticate
     if user = User.find_by_email(data["email"])
       unless user.fbid
         user.fbid = data["id"]

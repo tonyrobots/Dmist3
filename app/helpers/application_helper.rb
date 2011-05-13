@@ -22,4 +22,14 @@ module ApplicationHelper
       dream.created_at.strftime("%A, %B %d, %Y")
     end
   end
+  
+  def avatar_thumb_linked(user_id)
+    user = User.find(user_id)
+    html = ""
+    avatar_etc = (image_tag (user.avatar.url)) +  (content_tag :br, user.username)
+    html += link_to (avatar_etc), user_path(user_id)
+    return html.html_safe
+  end
+  
+  
 end

@@ -10,6 +10,7 @@ gem 'devise', '1.3.4'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem 'jquery-rails', '>= 0.2.6'
 gem 'acts-as-taggable-on'
+gem 'paperclip'
 
 
 
