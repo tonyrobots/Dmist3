@@ -14,28 +14,29 @@
 	     <body>
          <%= render :partial => "/home/ga" %>
 		 <%= render :partial => "/home/fb" %>
+	     
 
-	   
-	     <div id="container">
-	     <div id="logo">
-	       <%= link_to(image_tag("logo_tab.png", :border =>0), root_path) %>
-		   <% # link_to("Dreamerist", root_path)%>
-	     </div>
-		<div id="login_box">
-		 <%= render :partial => "/shared/login_box" %>
-		</div>
-		<div id="search">
-			SEARCH TK
-		</div>
-	    <div id="flash">
-		  <p><%= flash[:notice] %></p>
-		  <p><%= flash[:alert] %></p>
-		</div>
+		
+	    <div id="container">
+			<div id="logo">
+		       <%= link_to(image_tag("logo_tab.png", :border =>0), root_path) %>
+			   <% # link_to("Dreamerist", root_path)%>
+		    </div>
+			<div id="login_box">
+			 <%= render :partial => "/shared/login_box" %>
+			</div>
+			<div id="search">
+				SEARCH TK
+			</div>
+		    <div id="flash">
+			  <span><%= flash[:notice] %></span>
+			  <span><%= flash[:alert] %></span>
+			</div>
          
-	     <%= yield %>
+		     <%= yield %>
 		 
-		 <div id="footer">footer</div>
-         </div>
+			 <div id="footer">footer</div>
+        </div>
 		
 	     <% if ENV["RAILS_ENV"] == "development" %>
 

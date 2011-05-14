@@ -43,7 +43,7 @@ legend {
 	width: 904px;
 	margin: 0 auto;
 	background: #fff;
-	margin-top: 65px;
+	margin-top: 75px;
 	padding-left: 30px;
 	-webkit-border-radius: 20px; -moz-border-radius: 20px;
 }
@@ -63,20 +63,12 @@ legend {
 	font-size:36pt;	
 }
 
-#topnav {
-	position: absolute;
-	top: 32px;
-	left: 600px;
-	background: #fff;
-	-webkit-border-radius: 10px; -moz-border-radius: 10px;
-	padding: 10px;
-}
 
 #login_box {
 	position: absolute;
 	font-size:10pt;
-	top: 15px;
-	left: 700px;
+	top: 12px;
+	left: 600px;
 	width:280px;
 	height: 50px;
 	background: #fff;
@@ -187,6 +179,33 @@ tr.even {
 	    background-color: #ffffff;
 	    border: solid 1px #33677F;
 	}
+	
+/* nice buttons */
+a.button {
+	font-size:20px;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	width:250px;
+	padding:10px;
+	border:1px solid #DDD;
+	text-align:center;
+	background:#4195DD;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#151361), to(#4195DD));
+	background:-moz-linear-gradient(0% 90% 90deg, #4195DD, #151361);
+
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+a.button:hover {
+	color:#ffd;
+	border-color:#3278BE;
+}
+a.button:active {
+
+}
 
 .left {
 	float:left;
@@ -194,6 +213,10 @@ tr.even {
 
 .right {
 	float:right;
+}
+
+.grey {
+	background:#ccc;
 }
 
 * html #footer {
