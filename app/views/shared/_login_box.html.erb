@@ -1,0 +1,10 @@
+	<%  if !current_user %>
+	 <span id="welcome">Welcome to Dreamerist!</span>
+	    <%= link_to "Log In", new_user_session_path  %> |
+		<%= link_to "Register", new_user_registration_path  %> |
+		<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+	<% else %>
+	  <%= image_tag(current_user.avatar.url, :class => "left", :id => "login_box_avatar")%>
+	 <span id="welcome">Welcome, <%= link_to current_user.username, current_user %>!</span>
+	  <%= link_to "Logout", destroy_user_session_path, :confirm => "Are you sure you want to logout?" %>
+	<% end %>

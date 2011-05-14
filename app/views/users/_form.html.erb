@@ -1,4 +1,6 @@
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
+<fieldset>
+	<legend>User Settings</legend>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -10,7 +12,7 @@
       </ul>
     </div>
   <% end %>
-
+<div id="inputArea">
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -20,10 +22,14 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
- 	<%= f.label :avatar %>  
+ 	<%= f.label :avatar %><br />
+	<%= image_tag (@user.avatar.url) %>
+	<br />
 	<%= f.file_field :avatar %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <p><%= f.submit %></p>
   </div>
+</div>
+</fieldset>
 <% end %>

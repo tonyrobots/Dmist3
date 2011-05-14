@@ -20,6 +20,16 @@
   </p>
 
   <p>
+    <%= f.label "Feeling" %><br />
+	Was this a good dream or a bad dream? (1 is nightmare, 5 is bliss!)
+    <%= f.range_field :feeling,	 :in => 1..5 %>
+  </p>
+  <p>
+    <%= f.label "Private" %><br />
+    <%= f.check_box :private %> Private Dream (don't show anyone else!)
+  </p>
+
+  <p>
     <%= f.submit 'Submit Dream' %>
   </p>
 </fieldset>

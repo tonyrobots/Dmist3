@@ -36,7 +36,7 @@ class DreamsController < ApplicationController
   end
   
   def index
-    # not used?
+    # not used yet
     @dreams = Dream.where(:visible => TRUE, :private => FALSE)
   end
   

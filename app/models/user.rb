@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar
   
   acts_as_tagger
-    
+  
+  # relationships
+  has_many :dreams
   has_many :comments, :as => :commentable  
   
   # use paperclip for avatars
@@ -19,7 +21,10 @@ class User < ActiveRecord::Base
                                            :default_url => "/images/avatars/:style_missing.png"
 
   
-  has_many :dreams
+  # validations
+  
+  validates_attachment_size :avatar, :less_than => 1.megabyte  
+  validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates_format_of :username,
                       :with => /^[A-Z0-9_]*$/i,
                       :message => "must contain only letters, numbers, and underscores."

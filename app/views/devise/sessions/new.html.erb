@@ -1,17 +1,31 @@
-<h2>Sign in</h2>
+<fieldset>
+	<legend>Sign in</legend>
+<table>
+	<tr><td>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<div id="inputArea">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :username %><br />
-  <%= f.text_field :username %></p>
+		  <p><%= f.label :username %><br />
+		  <%= f.text_field :username %></p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+		  <p><%= f.label :password %><br />
+		  <%= f.password_field :password %></p>
 
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
+		  <% if devise_mapping.rememberable? -%>
+		    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+		  <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
+		  <p><%= f.submit "Sign in" %></p>
+		<% end %>
+		</div>
+		</td>
+		<td style="vertical-align:middle">
+			- or -
+		</td>
+		<td><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+		</td>	
+	</tr>
+</table>
 
+</fieldset>
 <%= render :partial => "devise/shared/links" %>

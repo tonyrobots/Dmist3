@@ -1,5 +1,6 @@
 class Dream < ActiveRecord::Base
   belongs_to :user
+  default_scope :order => 'created_at DESC'
   
   has_many :comments, :as => :commentable  
   #accepts_nested_attributes_for :comments

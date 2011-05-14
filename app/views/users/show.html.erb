@@ -15,8 +15,7 @@
 	</div>
 		
 	<% if user_signed_in? && current_user.id == @user.id %>
-		<p>This is your own profile, and things only you can do, like edit it,
-		 and change settings, etc will be available here.</p>
+		<p><%= link_to "Change your username/password/avatar", edit_user_path %></p>
 	
 	<div id="userstats">
 	  <b>Login count:</b> <%=h @user.sign_in_count %><br />
