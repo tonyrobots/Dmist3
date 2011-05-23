@@ -1,8 +1,9 @@
 
 <div id="contentcolumn">
-
+<h2>All dreams</h2>
+<%= paginate @dreams %>
 <%= render :partial => "dreams/dreamlist", :dreams => @dreams  %>
-
+<%= paginate @dreams %>
 </div>
 
 <div id="rightcolumn">

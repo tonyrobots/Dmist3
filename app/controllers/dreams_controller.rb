@@ -37,7 +37,7 @@ class DreamsController < ApplicationController
   end
   
   def index
-    @dreams = Dream.where(:visible => TRUE, :private => FALSE)
+    @dreams = Dream.where(:visible => TRUE, :private => FALSE).page(params[:page])  
   end
   
   def show
