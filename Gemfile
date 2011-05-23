@@ -15,6 +15,7 @@ gem 'paperclip'
 
 
 
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -36,5 +37,5 @@ gem 'paperclip'
 # and rake tasks are available in development mode:
 group :development, :test do
     gem 'unicorn'
-#   gem 'webrat'
+    gem 'faker'
 end

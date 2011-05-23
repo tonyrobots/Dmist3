@@ -3,6 +3,7 @@ body {
 	line-height: 1.4;
 	color: #111144; 
     background-image: url(/images/stripe_bg2.png);
+	font-size: 12pt;
 	}
 h1 {
 	font-size: 200%;
@@ -63,21 +64,20 @@ legend {
 	font-size:36pt;	
 }
 
-
 #login_box {
 	position: absolute;
 	font-size:10pt;
 	top: 12px;
-	left: 600px;
+	left: 700px;
 	width:280px;
 	height: 50px;
 	background: #fff;
 	-webkit-border-radius: 5px; -moz-border-radius: 5px;
 	padding: 5px;
-	a font-style: underline;
+	a text-decoration: underline;
 }
 	#welcome {  font-style: italic; vertical-align:top; left-padding: 15px;	}
-	#login_box_avatar { border: 2px black; }
+	#login_box_avatar { border: 2px black; right-padding: 5px; }
  
 #contentcolumn {
 	width: 538px;
@@ -89,6 +89,12 @@ legend {
 	width: 330px;
 	padding: 18px;
 	text-align:left;
+}
+
+#add_dream {
+	clear:both;
+	text-align:center;
+	padding:5px;
 }
 
 #footer {
@@ -153,6 +159,8 @@ tr.even {
 	-webkit-border-radius: 5px; -moz-border-radius: 5px;
 }
 
+#featured { text-align: middle; vertical-align: middle;}
+
 /* Nice forms */
 	#inputArea
 	{
@@ -214,6 +222,13 @@ a.button:active {
 .right {
 	float:right;
 }
+
+.small_head {
+	font-style: italic;
+	font-size: 10pt;
+}
+
+.inline_head { font-size: 18pt; font-style: bold; }
 
 .grey {
 	background:#ccc;

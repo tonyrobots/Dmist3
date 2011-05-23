@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar, :location
   
   acts_as_tagger
   
@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
   validates_attachment_size :avatar, :less_than => 1.megabyte  
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates_format_of :username,
-                      :with => /^[A-Z0-9_]*$/i,
-                      :message => "must contain only letters, numbers, and underscores."
+                      :with => /^[A-Z0-9_\.]*$/i,
+                      :message => "must contain only letters, numbers, periods, and underscores."
                       
   validates_presence_of :username
                       

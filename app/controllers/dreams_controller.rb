@@ -19,6 +19,7 @@ class DreamsController < ApplicationController
 
   def edit
     @dream = Dream.find(params[:id])
+    @dream.location ||= current_user.location
     unless current_user.id == @dream.user_id
       flash[:alert] = "You can't edit someone else's dream."
       redirect_to(@dream)
@@ -36,7 +37,6 @@ class DreamsController < ApplicationController
   end
   
   def index
-    # not used yet
     @dreams = Dream.where(:visible => TRUE, :private => FALSE)
   end
   

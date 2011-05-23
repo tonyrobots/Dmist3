@@ -1,7 +1,14 @@
 <div id="contentcolumn">
+	<div id="featured">
+	<span class="small_head">Dream o' the Day:</span><br />
+	<%= image_tag @featured_dream.user.avatar.url, class: "left" %>
+	<span class="inline_head"><%= link_to(@featured_dream.title, @featured_dream) %></span> by  <%= link_to(@featured_dream.user.username,@featured_dream.user) %>
+	</div>
+	<div id="latest">
 	<h3>Latest dreams:</h3>
 	<%= render :partial => "dreams/dreamlist", :dreams => @dreams  %>
-	<%= link_to "more dreams", dreams_path %>
+	<%= link_to "more dreams", dreams_path, :class => "right" %>
+	</div>
 </div>
 
 <div id="rightcolumn">
