@@ -1,5 +1,5 @@
 body { 
-	font-family: "Helvetica", 'Arial', sans-serif;
+	font-family: "Gill Sans", "Helvetica", 'Arial', sans-serif;
 	line-height: 1.4;
 	color: #111144; 
     background-image: url(/images/stripe_bg2.png);
@@ -18,8 +18,7 @@ h3 {
 	}
 	
 a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
+	text-decoration: underline; 
 	color: #151361;
 	}
 a:visited { 

@@ -12,6 +12,10 @@
 </div>
 
 <div id="rightcolumn">
+	<div id="feeling">
+		<h3>How's the weather?</h3>
+		Median: <%= @feeling_median %> -- Mean: <%= number_with_precision(@feeling_mean, :precision => 2) %>
+	</div>
 	<div id="add_dream">
 		<%= link_to_unless_current("Add Dream", new_dream_path, :class => "button") %>
 	</div>
