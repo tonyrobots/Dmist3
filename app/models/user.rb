@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
                                            :default_style => :thumb,
                                            :default_url => "/images/avatars/:style_missing.png",
 					   :storage => :s3,
-                                          :s3_credentials => "#{Rails.root}/config/s3.yml"
+                                           :s3_credentials => "#{Rails.root}/config/s3.yml"
 
   
   # validations
