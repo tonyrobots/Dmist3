@@ -12,6 +12,7 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'acts-as-taggable-on'
 gem 'paperclip'
 gem "kaminari"  
+gem 'faker'
 
 
 
@@ -37,5 +38,4 @@ gem "kaminari"
 # and rake tasks are available in development mode:
 group :development, :test do
     gem 'unicorn'
-    gem 'faker'
 end
