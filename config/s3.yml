@@ -1,0 +1,14 @@
+development:
+   bucket: dreamerist
+   access_key_id: AKIAIVNARQSXPUFK4QJA
+   secret_access_key: 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
+
+test:
+   bucket: dreamerist
+   access_key_id: AKIAIVNARQSXPUFK4QJA
+   secret_access_key: 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
+
+production:
+   bucket: dreamerist
+   access_key_id: AKIAIVNARQSXPUFK4QJA
+   secret_access_key: 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

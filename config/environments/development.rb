@@ -22,5 +22,8 @@ Dream3::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  PAPERCLIP_STORAGE_OPTIONS = { :storage => :s3,
+                                :s3_credentials => "#{Rails.root}/config/s3.yml"}
 end
 

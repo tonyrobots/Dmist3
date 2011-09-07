@@ -13,6 +13,7 @@ gem 'acts-as-taggable-on'
 gem 'paperclip'
 gem "kaminari"  
 gem 'faker'
+gem 'aws-s3'
 
 
 

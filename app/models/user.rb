@@ -14,11 +14,12 @@ class User < ActiveRecord::Base
   has_many :comments, :as => :commentable  
   
   # use paperclip for avatars
-   has_attached_file :avatar, :styles => { :large => "325x325>", :medium => "200x200>", :thumb => "48x48#" },
-                                           :url => "/images/:attachment/:id/:style_:id.:extension",
-                                           :path => ":rails_root/public/images/:attachment/:id/:style_:id.:extension",
+   has_attached_file :avatar,  :styles => { :large => "325x325>", :medium => "200x200>", :thumb => "48x48#" },
+                                           :path => "/avatars/:id/:style_:id.:extension",
                                            :default_style => :thumb,
-                                           :default_url => "/images/avatars/:style_missing.png"
+                                           :default_url => "/images/avatars/:style_missing.png",
+					   :storage => :s3,
+                                          :s3_credentials => "#{Rails.root}/config/s3.yml"
 
   
   # validations
