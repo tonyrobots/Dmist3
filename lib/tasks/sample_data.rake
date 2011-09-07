@@ -3,7 +3,7 @@ require 'faker'
 namespace :db do
   desc "Fill database with sample users"
   task :fake_users, [:number] => :environment do |t, args|
-    args.with_defaults(:number => 50)
+    args.with_defaults(:number => 15)
     #Rake::Task['db:reset'].invoke
     args[:number].times do |n|
       username  = Faker::Internet.user_name
@@ -24,7 +24,7 @@ namespace :db do
     #Rake::Task['db:reset'].invoke
     user_ids = User.find(:all, :select => "id").map(&:id)
         
-    500.times do |n|
+    10.times do |n|
       title  = Faker::Company.catch_phrase()
       body = Faker::Lorem.paragraphs(rand(6)+1)
       tag_list = Faker::Lorem.words(4)
