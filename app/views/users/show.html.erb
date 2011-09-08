@@ -24,7 +24,7 @@
 		<p><%= link_to "Change your username/password/avatar", edit_user_path %></p>
 	
 	<div id="userstats">
-	  <%= "<b>Site administrator</b><br/>" if @user.role == 1 %>
+	  <%= raw "<b>Site administrator</b><br/>" if @user.role == User::ADMIN %>
 	  <b>Login count:</b> <%=h @user.sign_in_count %><br />
 	  <b>Last login at:</b>
 	  <%=h @user.last_sign_in_at %>
