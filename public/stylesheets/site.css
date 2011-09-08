@@ -108,6 +108,11 @@ legend {
 	margin-right: 30px;
 }
 
+#twitter_follow {
+	float:right;
+	margin-right:-20px;
+	margin-top: -45px;
+}
 
 td {
 	padding:3px;
