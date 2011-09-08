@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:danbee/ajaxful_rating_jquery.git
+  remote: git://github.com/danbee/ajaxful_rating_jquery.git
   revision: b4a2c760cdbad9cd865fb18667d14045018287ed
   specs:
     ajaxful_rating_jquery (3.0.0.beta3)
