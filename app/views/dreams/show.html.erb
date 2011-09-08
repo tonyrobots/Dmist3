@@ -39,7 +39,13 @@
 	<p><fb:like></fb:like></p>
 	<div id="ratings" >
 		<% unless current_user %><b> You must be <%= link_to "logged in", new_user_session_path %> to rate dreams!</b><% end %>
-		
+		<h3>Ratings:</h3>
+		<b>Interestingness:</b><br />
+		<%= ratings_for @dream, :dimension => :interestingness %>
+		<b>Weirdness:</b><br />
+		<%= ratings_for @dream, :dimension => :weirdness %>
+		<b>Writing:</b><br />
+		<%= ratings_for @dream, :dimension => :writing %>
 
 	</div>
 	<div id="commentarea">

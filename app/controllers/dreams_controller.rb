@@ -65,4 +65,14 @@ class DreamsController < ApplicationController
      @dream.tag_list.add(params[:name])
      @dream.save
   end
+  
+  def rate
+    @dream = Dream.find(params[:id])
+    @dream.rate(params[:stars], current_user, params[:dimension])
+    #id = "ajaxful-rating-#{!params[:dimension].blank? ? "#{params[:dimension]}-" : ''}dream-#{@dream.id}"
+    average = @dream.rate_average(true, params[:dimension])
+    width = (average / @dream.class.max_stars.to_f) * 100
+    render :json => {:id => @dream.wrapper_dom_id(params), :average => average, :width => width}
+  end
+  
 end

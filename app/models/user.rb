@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar, :location
   
   acts_as_tagger
+  ajaxful_rater
   
   # relationships
   has_many :dreams

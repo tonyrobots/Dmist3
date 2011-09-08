@@ -2,7 +2,9 @@ Dream3::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :dreams do
-    
+    member do
+      post :rate
+    end
   end
   resources :tags, :only => [:create, :destroy, :show]
   resources :comments

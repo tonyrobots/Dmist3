@@ -8,5 +8,8 @@ class Dream < ActiveRecord::Base
   validates_presence_of :title, :body
   
   acts_as_taggable_on :tags
+
+  ajaxful_rateable :stars =>5, :dimensions => [:interestingness, :weirdness, :writing]
+
   
 end
