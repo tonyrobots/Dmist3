@@ -18,11 +18,13 @@
 	<div id="profile_avatar">
 		<%= image_tag @user.avatar.url(:large) %>
 	</div>
+	
 		
 	<% if user_signed_in? && current_user.id == @user.id %>
 		<p><%= link_to "Change your username/password/avatar", edit_user_path %></p>
 	
 	<div id="userstats">
+	  <%= "<b>Site administrator</b><br/>" if @user.role == 1 %>
 	  <b>Login count:</b> <%=h @user.sign_in_count %><br />
 	  <b>Last login at:</b>
 	  <%=h @user.last_sign_in_at %>

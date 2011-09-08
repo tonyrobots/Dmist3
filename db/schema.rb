@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908005641) do
+ActiveRecord::Schema.define(:version => 20110908181755) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20110908005641) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "location"
+    t.integer  "role",                                :default => 0,  :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
