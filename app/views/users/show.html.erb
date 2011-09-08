@@ -7,6 +7,11 @@
 	<%= render :partial => "dreams/dreamlist", :dreams => @dreams  %>
 <% else %>
 	You haven't recorded any dreams yet! Why not <%= link_to "add one now", new_dream_path %>? No time like the present!
+	<p>
+		<div id="add_dream">
+			<%= link_to_unless_current("Add Dream", new_dream_path, :class => "button") %>
+		</div>
+	</p>
 <% end %>
 </div>
 <div id="rightcolumn">
