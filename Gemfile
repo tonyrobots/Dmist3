@@ -42,3 +42,7 @@ gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jqu
 group :development, :test do
     gem 'unicorn'
 end
+
+group :production do
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
+end
