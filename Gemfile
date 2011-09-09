@@ -43,3 +43,7 @@ gem 'exclusivity', :git => 'git://github.com/ejdraper/exclusivity.git'
 group :development, :test do
     gem 'unicorn'
 end
+
+group :production do
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
+end
