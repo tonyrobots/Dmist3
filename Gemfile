@@ -15,6 +15,7 @@ gem "kaminari"
 gem 'faker'
 gem 'aws-s3'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
+gem 'exclusivity', :git => 'git://github.com/ejdraper/exclusivity.git'
 
 
 
