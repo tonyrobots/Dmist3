@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'devise', '1.3.4'
+gem 'sqlite3', '~> 1.3.4'
+gem 'devise'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem 'jquery-rails', '>= 0.2.6'
 gem 'acts-as-taggable-on'
@@ -15,6 +15,7 @@ gem "kaminari"
 gem 'faker'
 gem 'aws-s3'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
 
@@ -45,4 +46,12 @@ end
 
 group :production do
   gem 'rack-google_analytics', :require => "rack/google_analytics"
+end
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
 end
