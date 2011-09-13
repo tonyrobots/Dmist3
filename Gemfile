@@ -16,6 +16,7 @@ gem 'faker'
 gem 'aws-s3'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'heroku'
 
 
 
@@ -46,6 +47,7 @@ end
 
 group :production do
   gem 'rack-google_analytics', :require => "rack/google_analytics"
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
