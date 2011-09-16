@@ -36,9 +36,9 @@ RailsAdmin.config do |config|
   # config.authorize_with :cancan
   
   # Or use a custom dead-stupid authorization rule:
-  # config.authorize_with do
-  #   redirect_to root_path unless warden.user.is_admin?
-  # end
+   config.authorize_with do
+     redirect_to "/" unless warden.user.is_admin?
+   end
   
   # Use a specific role for ActiveModel's :attr_acessible :attr_protected
   # Default is :default

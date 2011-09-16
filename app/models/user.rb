@@ -72,4 +72,8 @@ class User < ActiveRecord::Base
      end
   end
   
+  def is_admin?
+    self.role == ADMIN
+  end
+  
 end
