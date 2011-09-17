@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+       <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+       <head>
+         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	      <title><%= @title + " // " if @title %>dreamerist: a site for dreams</title>
+	      <%= stylesheet_link_tag "splash" %>
+		  <%= javascript_include_tag :defaults %>
+		  <%= csrf_meta_tag %>
+		 <meta name="google-site-verification" content="1Bgq--jdydoRuZnCzirtpsf-41zDzSfvc5Jelkt36Ss" />
+	     </head>
+	     <body style="background-image: url(http://s3.amazonaws.com/prefinery/teaser_assets/468/stripe_bg2.png);">
+         <%= render :partial => "/home/ga" %>
+ 			<div id="flash">
+			  <span><%= flash[:notice] %></span>
+			  <span><%= flash[:alert] %></span>
+			</div>
+         
+		     <%= yield %>
+		
+    </body>
+</html>
+
