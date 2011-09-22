@@ -1,6 +1,7 @@
 # app/controllers/static_controller.rb
 class StaticController < ApplicationController
   layout 'plain'
+  skip_before_filter :check_invite_code
 
   caches_page :show
 
