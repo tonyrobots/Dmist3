@@ -50,5 +50,6 @@ end
 group :production do
   gem 'rack-google_analytics', :require => "rack/google_analytics"
   gem 'pg'
+  gem 'thin'
   #gem 'therubyracer-heroku', '0.8.1.pre3'
 end
