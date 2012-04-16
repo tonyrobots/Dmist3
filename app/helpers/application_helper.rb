@@ -2,8 +2,8 @@
 module ApplicationHelper
   
   def getUsernameLinkById(id)
-    @user = User.find_by_id(id)
-    link_to "FIX ME", @user
+    user = User.find_by_id(id)
+    link_to user.username, user_path(id)
   end
   
   def current_user_is?(id)
