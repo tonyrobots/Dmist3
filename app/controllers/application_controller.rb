@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   #before_filter :authenticate_user!
   #this is for the prefinery invite screen
-  before_filter :check_invite_code
+  #before_filter :check_invite_code
   
   protected
   
