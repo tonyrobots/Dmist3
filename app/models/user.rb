@@ -78,8 +78,10 @@ class User < ActiveRecord::Base
   
   
   # just for invite_code validation
-  validate do |user|
+if SITE_IS_PRIVATE
+    validate do |user|
       code_hash = "494104dd992f3d033f11ae28613bf53c1c5ba08b" + user.email
       user.errors[:base] << "Please check invite code" if user.invite_code != Digest::SHA1.hexdigest(code_hash)
+    end
   end
 end
