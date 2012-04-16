@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', '~> 1.3.4'
+
 gem 'devise', '1.4.5'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem 'jquery-rails', '>= 0.2.6'
@@ -45,6 +45,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 # and rake tasks are available in development mode:
 group :development, :test do
     gem 'unicorn'
+	gem 'sqlite3', '~> 1.3.4'
 end
 
 group :production do
