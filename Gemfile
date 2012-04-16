@@ -6,7 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3', '~> 1.3.4'
-gem 'devise'
+gem 'devise', '1.4.5'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem 'jquery-rails', '>= 0.2.6'
 gem 'acts-as-taggable-on'
@@ -14,10 +14,11 @@ gem 'paperclip'
 gem "kaminari"  
 gem 'faker'
 gem 'aws-s3'
+gem 'aws-sdk', '~> 1.3.4'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'heroku'
-gem 'omniauth'
+#gem 'omniauth'
 
 
 
