@@ -1,0 +1,240 @@
+body { 
+	font-family: "Gill Sans", "Helvetica", 'Arial', sans-serif;
+	line-height: 1.4;
+	color: #111144; 
+    background-image: url(/images/stripe_bg2.png);
+	font-size: 12pt;
+	}
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+	color:#151361;
+}
+h3 { 
+	font-style: italic;
+	font-size: 1.3em;
+	letter-spacing: 1.2px; 
+	margin-bottom: 0; 
+	}
+	
+a:link { 
+	color: #151361;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #151361;
+	}
+a:hover, a:active { 
+	background-color: #fff;
+	}
+fieldset {
+	background: #d6e5f4;;
+}
+legend {
+	color: #fff;
+	background: #151361;
+	padding: .4em 1em;
+	-webkit-border-radius: 8px; -moz-border-radius: 8px;
+}
+#container {
+	width: 904px;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 75px;
+	padding-left: 30px;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+}
+
+#logo {
+	position: relative;	
+	top: -59px;
+}
+
+#logotype {
+	position: relative;	
+	top: -60px;
+	background: #fff;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+	padding: 10px;
+	width: 300px;
+	font-size:36pt;	
+}
+
+#login_box {
+	position: absolute;
+	font-size:10pt;
+	top: 12px;
+	left: 700px;
+	width:280px;
+	height: 50px;
+	background: #fff;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 5px;
+}
+	#welcome {  font-style: italic; vertical-align:top; left-padding: 15px;	}
+	#login_box_avatar { border: 2px black; right-padding: 5px; }
+ 
+#contentcolumn {
+	width: 538px;
+	float: left;
+}
+
+#rightcolumn {
+	float:right;
+	width: 330px;
+	padding: 18px;
+	text-align:left;
+}
+
+#add_dream {
+	clear:both;
+	text-align:center;
+	padding:5px;
+}
+
+#footer {
+	clear:both;
+	font-size:9pt;
+	text-align:center;
+	margin-top: 20px;
+}
+
+#search {
+	float:right;
+	margin-right: 30px;
+}
+
+#twitter_follow {
+	float:right;
+	margin-right:-20px;
+	margin-top: -45px;
+}
+
+td {
+	padding:3px;
+}
+
+tr.odd {
+	background-color: #aaa;
+}
+tr.even {
+	background-color: #ddd;
+}
+#debug {
+    background: #ddd;
+	border: solid 2px;
+	border-color: #444;
+	width: 900px;
+	padding: 5px 20px;
+	margin: 0 auto;
+	-webkit-border-radius: 20px; -moz-border-radius: 20px;
+}
+#userstats {
+	font-size: 9pt;
+	border: 1px solid;
+}
+#flash {
+	color: #B43530;
+	font-weight: bold;
+}
+#ratings {
+	background-color:#DDD;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	padding-top: 2px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+#subline {
+	color:#666;
+	font-size: 9pt;
+	font-style: italic;
+}
+#comment {
+	background-color:#000;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 32px;
+
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+
+#featured { text-align: middle; vertical-align: middle;}
+
+/* Nice forms */
+	#inputArea
+	{
+	    font-family: Helvetica, Arial, Sans-Serif;
+	    font-size: 12px;
+	    background-color: #d6e5f4;
+	    padding: 10px;
+	}
+
+	#inputArea input[type="text"], #inputArea textarea, #inputArea input[type="password"]
+	{
+	    font-family: Arial, Sans-Serif;
+	    font-size: 24px;
+	    margin-bottom: 5px;
+	    display: block;
+	    padding: 4px;
+	    border: solid 2px #85b1de;
+	    width: 300px;
+	}
+
+	#inputArea input[type="text"]:focus, #inputArea textarea:focus, input[type="password"]:focus
+	{
+	    background-image: none;
+	    background-color: #ffffff;
+	    border: solid 1px #33677F;
+	}
+	
+/* nice buttons */
+a.button {
+	font-size:20px;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	width:250px;
+	padding:10px;
+	border:1px solid #DDD;
+	text-align:center;
+	background:#4195DD;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#151361), to(#4195DD));
+	background:-moz-linear-gradient(0% 90% 90deg, #4195DD, #151361);
+
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+a.button:hover {
+	color:#ffd;
+	border-color:#3278BE;
+}
+a.button:active {
+
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.small_head {
+	font-style: italic;
+	font-size: 10pt;
+}
+
+.inline_head { font-size: 18pt; font-style: bold; }
+
+.grey {
+	background:#ccc;
+}
+
+* html #footer {
+		height:1px;
+	}
