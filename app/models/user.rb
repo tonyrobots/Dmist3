@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :invite_code
   
   # Role definitions
   ADMIN = 1
@@ -76,4 +76,10 @@ class User < ActiveRecord::Base
     self.role == ADMIN
   end
   
+  
+  # just for invite_code validation
+  validate do |user|
+      code_hash = "494104dd992f3d033f11ae28613bf53c1c5ba08b" + user.email
+      user.errors[:base] << "Please check invite code" if user.invite_code != Digest::SHA1.hexdigest(code_hash)
+  end
 end

@@ -15,7 +15,11 @@ Dream3::Application.routes.draw do
 
   root :to => "home#index"
   
-  
+  #to handle the splash page, but could be used for any static page in the /static views dir 
+  #(just remember to add it to the whitelist in the static controller)
+  #((also keep this last!!!))
+  #match ':action' => 'static#:action'
+  match ':path' => 'static#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
