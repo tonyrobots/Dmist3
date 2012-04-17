@@ -1,3 +1,7 @@
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+
 $('#toggle_comment_form').click(function() {
 	return false;
 });

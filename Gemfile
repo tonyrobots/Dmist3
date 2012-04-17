@@ -8,7 +8,7 @@ gem 'rails', '3.1.0'
 
 gem 'devise', '1.4.5'
 gem "oa-oauth", :require => "omniauth/oauth"
-gem 'jquery-rails', '>= 0.2.6'
+gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'paperclip'
 gem "kaminari"  
@@ -55,7 +55,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   "~> 3.1.0"
+  gem 'sass-rails',   "3.1.5"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end

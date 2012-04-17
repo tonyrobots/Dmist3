@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: c2c4f9195f54f3d60998c94bfa49ecac018e3c8b
+  revision: e12f8b4fd0d2198da2684ad787c488e26564eaa0
   specs:
     rails_admin (0.0.1)
       bbenezech-nested_form (~> 0.0.6)
@@ -178,10 +178,10 @@ GEM
       json (~> 1.4)
     remotipart (1.0.2)
     sass (3.1.15)
-    sass-rails (3.1.6)
+    sass-rails (3.1.5)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
-      sass (>= 3.1.10)
+      sass (~> 3.1.10)
       tilt (~> 1.3.2)
     sprockets (2.0.3)
       hike (~> 1.2)
@@ -221,7 +221,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0)
   devise (= 1.4.5)
   faker
-  jquery-rails (>= 0.2.6)
+  jquery-rails
   kaminari
   oa-oauth
   paperclip
@@ -229,7 +229,7 @@ DEPENDENCIES
   rack-google_analytics
   rails (= 3.1.0)
   rails_admin!
-  sass-rails (~> 3.1.0)
+  sass-rails (= 3.1.5)
   sqlite3 (~> 1.3.4)
   thin
   uglifier
