@@ -7,6 +7,7 @@
 	      <title><%= @title + " // " if @title %>dreamerist: a site for dreams</title>
 	      <%= stylesheet_link_tag "site" %>
 		  <%= javascript_include_tag "application" %>
+		 <link href='http://fonts.googleapis.com/css?family=Marmelad|Patua+One' rel='stylesheet' type='text/css'>
 		  <%= csrf_meta_tag %>
 		  <%= ajaxful_rating_style %>	
 		  <%= raw ajaxful_rating_script %> 
@@ -48,7 +49,7 @@
 			 <%= debug(params) %>
 
 	     <% end %>
-   
+     <%= render :partial => "/shared/get_satisfaction" %>
     </body>
 </html>
 

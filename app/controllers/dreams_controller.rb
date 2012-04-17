@@ -49,7 +49,7 @@ class DreamsController < ApplicationController
   
   def destroy
      @dream = Dream.find(params[:id]) 
-     if current_user.id == @dream.user_id
+     if current_user.id == @dream.user_id || current_user.is_admin?
        @dream.visible = FALSE
        @dream.save
        flash[:notice] = "\"" + @dream.title + "\" removed."
