@@ -42,7 +42,7 @@
          
 		     <%= yield %>
 		 
-			 <div id="footer">footer</div>
+			<%= render :partial => "/shared/footer" %>
         </div>
 		
 	     <% if ENV["RAILS_ENV"] == "development" %>

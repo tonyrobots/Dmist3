@@ -1,8 +1,9 @@
 body { 
 	font-family: "Helvetica", 'Arial', sans-serif;
 	line-height: 1.4;
+	text-shadow: 0 1px #ffffff;
 	color: #111144; 
-    background-image: image-url('stripe_bg2.png');
+    background-image: image-url('stripe_bg.png');
 	font-size: 12pt;
 	}
 h1 {
@@ -12,7 +13,6 @@ h1 {
 	color:#151361;
 }
 h3 { 
-
 	font-size: 1.3em;
 	letter-spacing: 1.2px; 
 	font-family: "Patua One","Helvetica", 'Arial', sans-serif;
@@ -20,7 +20,6 @@ h3 {
 	}
 	
 a:link { 
-	text-decoration: underline;
 	color: #151361;
 	}
 a:visited { 
@@ -41,6 +40,7 @@ legend {
 	padding: .4em 1em;
 	-webkit-border-radius: 8px; -moz-border-radius: 8px;
 }
+
 #container {
 	width: 904px;
 	margin: 0 auto;
