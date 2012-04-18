@@ -1,27 +1,37 @@
-<fieldset>
-	<legend>Register</legend>
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-<div id="inputArea">
-  <p><%= f.label :username %><br />
-  <%= f.text_field :username %></p>
+<table><tr><td>
+			<fieldset>
+				<legend>Register</legend>
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+			<div id="inputArea">
+			  <p><%= f.label :username %><br />
+			  <%= f.text_field :username %></p>
 
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+			  <p><%= f.label :email %><br />
+			  <%= f.text_field :email %></p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+			  <p><%= f.label :password %><br />
+			  <%= f.password_field :password %></p>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
+			  <p><%= f.label :password_confirmation %><br />
+			  <%= f.password_field :password_confirmation %></p>
 
-<% if SITE_IS_PRIVATE %>
-  <p><%= f.label :invite_code %><br />
-  <%= f.text_field :invite_code %></p>-->
-<% end %>
+			<% if SITE_IS_PRIVATE %>
+			  <p><%= f.label :invite_code %><br />
+			  <%= f.text_field :invite_code %></p>-->
+			<% end %>
 
-  <p><%= f.submit "Sign up" %></p>
-</div>
-<% end %>
-</fieldset>
+			  <p><%= f.submit "Sign up" %></p>
+			</div>
+			<% end %>
+			</fieldset>
+		</td>
+		<td style="vertical-align:middle">
+			- or -
+		</td>
+		<td><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+		</td>	
+	</tr>
+</table>
+
 <%= render :partial => "devise/shared/links" %>
