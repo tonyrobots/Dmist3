@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   #this is for the prefinery invite screen
   #before_filter :check_invite_code
   
+  #@title || @title = "Dreamerist temp"
+  
   protected
   
   def check_invite_code

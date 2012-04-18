@@ -45,6 +45,7 @@ class DreamsController < ApplicationController
     @comments = @dream.comments.all
     @comment = Comment.new
     @dream_tag = @dream.tags.build
+    @title = @dream.title
   end
   
   def destroy
