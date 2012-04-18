@@ -45,7 +45,8 @@ class DreamsController < ApplicationController
     @comments = @dream.comments.all
     @comment = Comment.new
     @dream_tag = @dream.tags.build
-    @title = @dream.title
+    @title = @dream.title + " - on Dreamerist"
+    #@title = '"#{@dream.title}" - a dream from @dream.user.username on Dreamerist'
   end
   
   def destroy

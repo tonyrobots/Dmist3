@@ -36,7 +36,7 @@
 		<%=	link_to(image_tag("delete.png", :border =>0,  :alt => "Delete Dream"), @dream, :method => :delete) %>
 		<%= image_tag("private.png", :alt => "This dream is private! Only you can see it") if @dream.private %>
 	<%	end %>
-	<p><fb:like></fb:like></p>
+	<p><!--broken<fb:like></fb:like>--></p>
 	<div id="ratings" >
 		<% unless current_user %><b> You must be <%= link_to "logged in", new_user_session_path %> to rate dreams!</b><% end %>
 		<h3>Ratings:</h3>
