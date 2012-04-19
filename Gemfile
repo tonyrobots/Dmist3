@@ -10,11 +10,15 @@ gem 'rails', '3.1.0'
 #gem 'devise', '1.5.3'
 #gem "oa-oauth", :require => "omniauth/oauth"
 
-#newer devise/omniauth
-gem 'devise', '1.5.3'
+# devise 1.5.x/omniauth
+#gem 'devise', '1.5.3'
+#gem 'omniauth'
+#gem 'omniauth-facebook'
+
+# devise 2.0.x/omniauth
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-
 
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'

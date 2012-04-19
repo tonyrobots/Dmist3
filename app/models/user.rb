@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
                       
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     #data = access_token['extra']['user_hash']
-    data = access_token.info
+    data = access_token.extra.raw_info
     logger.debug access_token.to_yaml
     
     # if user already exists in database, just add the fbid and successfully authenticate
@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
       name = data["username"]?data["username"] : data["first_name"] + "." + data["last_name"]
       #avatar = open(URI.parse("http://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6226/aurora_img_2005254.jpg"))
       #logger.debug "pic url is  #{data["birthday"]} - #{data["pic_big_with_logo"]} - #{data["sex"]}"
-      if avatar_url = data.image
+      if avatar_url = "http://graph.facebook.com/#{data.id}/picture?type=large"
         avatar = open(URI.parse(avatar_url))
       end
       User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar => avatar, :avatar_remote_url => avatar_url, :password => Devise.friendly_token[0,20]) 
