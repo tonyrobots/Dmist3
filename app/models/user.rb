@@ -57,7 +57,9 @@ class User < ActiveRecord::Base
       end
       user
     else # Create a user with a stub password. 
-      name = data["username"]
+      #assigns FB username to username if available, otherwise, it's firstname.lastname
+      #TODO fix for cases when first.last is already taken
+      name = data["username"]?data["username"] : data["first_name"] + "." + data["last_name"]
       User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar=> data["picture"], :password => Devise.friendly_token[0,20]) 
     end
   end
