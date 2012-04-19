@@ -17,8 +17,10 @@ gem 'aws-s3'
 gem 'aws-sdk', '~> 1.3.4'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-#gem 'heroku'
-#gem 'omniauth'
+
+
+#gem 'oa-core'
+#gem 'omniauth-facebook'
 
 
 # Use unicorn as the web server

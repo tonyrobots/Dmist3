@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110917004056) do
+ActiveRecord::Schema.define(:version => 20120419180154) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20110917004056) do
     t.string   "location"
     t.integer  "role",                                :default => 0,  :null => false
     t.string   "invite_code"
+    t.string   "avatar_remote_url"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

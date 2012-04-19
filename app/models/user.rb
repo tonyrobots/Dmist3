@@ -1,11 +1,7 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :invite_code
+  
+  # this is for avatar upload via url
+  require 'open-uri'
   
   # Role definitions
   ADMIN = 1
@@ -37,17 +33,19 @@ class User < ActiveRecord::Base
   
   # validations
   
-  validates_attachment_size :avatar, :less_than => 500.kilobytes  
+  validates_attachment_size :avatar, :less_than => 500.kilobytes, :message => 'must be under 500kb'
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates_format_of :username,
                       :with => /^[A-Z0-9_\.]*$/i,
                       :message => "must contain only letters, numbers, periods, and underscores."
                       
   validates_presence_of :username
-  validates_uniqueness_of :username
+  validates_uniqueness_of :username  
+  
                       
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
+    
     # if user already exists in database, just add the fbid and successfully authenticate
     # TODO pull avatar from facebook if none is already set?
     if user = User.find_by_email(data["email"])
@@ -60,7 +58,12 @@ class User < ActiveRecord::Base
       #assigns FB username to username if available, otherwise, it's firstname.lastname
       #TODO fix for cases when first.last is already taken
       name = data["username"]?data["username"] : data["first_name"] + "." + data["last_name"]
-      User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar=> data["picture"], :password => Devise.friendly_token[0,20]) 
+      #avatar = open(URI.parse("http://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6226/aurora_img_2005254.jpg"))
+      #logger.debug "pic url is  #{data["birthday"]} - #{data["pic_big_with_logo"]} - #{data["sex"]}"
+      logger.debug data.to_yaml
+      avatar_url = data["pic_big_with_logo"]
+      avatar = open(URI.parse(avatar_url))
+      User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar => avatar, :remote_avatar_url => avatar_url, :password => Devise.friendly_token[0,20]) 
     end
   end
   
