@@ -141,9 +141,9 @@ Devise.setup do |config|
   # end
   
   if Rails.env == "development"
-    config.omniauth :facebook, "180960428585498", "2286246afc4f8ed792e784dd4e5c809e", :scope => 'user_location,email'
+    config.omniauth :facebook, "180960428585498", "2286246afc4f8ed792e784dd4e5c809e", :scope => 'email'
   else
-    config.omniauth :facebook, "173627622655935", "9e72e66aa1974dde4bd916cae0a9e6a1", :scope => 'user_location,email'
+    config.omniauth :facebook, "173627622655935", "9e72e66aa1974dde4bd916cae0a9e6a1", :scope => 'email'
   end
   
 end

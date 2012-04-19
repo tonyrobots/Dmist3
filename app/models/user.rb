@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar, :location, :role
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :avatar, :location, :role, :avatar_remote_url, :fbid
   
   acts_as_tagger
   ajaxful_rater
@@ -44,7 +44,9 @@ class User < ActiveRecord::Base
   
                       
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
-    data = access_token['extra']['user_hash']
+    #data = access_token['extra']['user_hash']
+    data = access_token.info
+    logger.debug access_token.to_yaml
     
     # if user already exists in database, just add the fbid and successfully authenticate
     # TODO pull avatar from facebook if none is already set?
@@ -60,10 +62,10 @@ class User < ActiveRecord::Base
       name = data["username"]?data["username"] : data["first_name"] + "." + data["last_name"]
       #avatar = open(URI.parse("http://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6226/aurora_img_2005254.jpg"))
       #logger.debug "pic url is  #{data["birthday"]} - #{data["pic_big_with_logo"]} - #{data["sex"]}"
-      logger.debug data.to_yaml
-      avatar_url = data["pic_big_with_logo"]
-      avatar = open(URI.parse(avatar_url))
-      User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar => avatar, :remote_avatar_url => avatar_url, :password => Devise.friendly_token[0,20]) 
+      if avatar_url = data.image
+        avatar = open(URI.parse(avatar_url))
+      end
+      User.create!(:email => data["email"], :username => name, :fbid => data["id"], :avatar => avatar, :avatar_remote_url => avatar_url, :password => Devise.friendly_token[0,20]) 
     end
   end
   

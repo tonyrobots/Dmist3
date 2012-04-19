@@ -6,8 +6,16 @@ gem 'rails', '3.1.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-gem 'devise', '1.4.5'
-gem "oa-oauth", :require => "omniauth/oauth"
+# old-school devise/omniauth
+#gem 'devise', '1.5.3'
+#gem "oa-oauth", :require => "omniauth/oauth"
+
+#newer devise/omniauth
+gem 'devise', '1.5.3'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'paperclip'
@@ -17,11 +25,6 @@ gem 'aws-s3'
 gem 'aws-sdk', '~> 1.3.4'
 gem 'ajaxful_rating_jquery', :git => 'git://github.com/danbee/ajaxful_rating_jquery.git'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-
-
-#gem 'oa-core'
-#gem 'omniauth-facebook'
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
