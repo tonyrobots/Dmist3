@@ -1,0 +1,6 @@
+comment ajax isn't working
+remove "search tk"
+set up mailers (i.e. for forgotten password)
+
+fixed:
+admin can't delete others' dreams

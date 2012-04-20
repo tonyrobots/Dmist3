@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   
   # validations
   
-  validates_attachment_size :avatar, :less_than => 500.kilobytes, :message => 'must be under 500kb'
+  validates_attachment_size :avatar, :less_than => 800.kilobytes, :message => 'must be under 800kb'
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates_format_of :username,
                       :with => /^[A-Z0-9_\.]*$/i,
@@ -61,7 +61,6 @@ class User < ActiveRecord::Base
       #TODO fix for cases when first.last is already taken
       name = data["username"]?data["username"] : data["first_name"] + "." + data["last_name"]
       #avatar = open(URI.parse("http://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6226/aurora_img_2005254.jpg"))
-      #logger.debug "pic url is  #{data["birthday"]} - #{data["pic_big_with_logo"]} - #{data["sex"]}"
       if avatar_url = "http://graph.facebook.com/#{data.id}/picture?type=large"
         avatar = open(URI.parse(avatar_url))
       end
@@ -82,7 +81,7 @@ class User < ActiveRecord::Base
   def is_admin?
     self.role == ADMIN
   end
-  
+      
   
   # just for invite_code validation
 if SITE_IS_PRIVATE

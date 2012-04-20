@@ -140,6 +140,10 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
   
+  # Stuff devise complained about after I updated it to 2.0:
+config.case_insensitive_keys = [:email]
+config.reset_password_within = 6.hours
+  
   if Rails.env == "development"
     config.omniauth :facebook, "180960428585498", "2286246afc4f8ed792e784dd4e5c809e", :scope => 'email'
   else
