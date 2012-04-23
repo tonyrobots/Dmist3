@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 
 # old-school devise/omniauth
-#gem 'devise', '1.5.3'
+#gem 'devise', '1.4.7'
 #gem "oa-oauth", :require => "omniauth/oauth"
 
 # devise 1.5.x/omniauth
