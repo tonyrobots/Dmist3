@@ -46,7 +46,8 @@ Dream3::Application.configure do
   #   :arguments => '-i -t'
   # }
   config.action_mailer.perform_deliveries = true
-  #config.action_mailer.default_url_options = { :host => 'heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'dreamerist.com' }
+  
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
     :address        => "smtp.sendgrid.net",
