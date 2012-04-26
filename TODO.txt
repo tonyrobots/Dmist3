@@ -1,10 +1,10 @@
-comment ajax isn't working
 remove "search tk"
 set up mailers (i.e. for forgotten password)
 lightbox possibility: http://www.jacklmoore.com/colorbox/guide
 
 fixed:
 admin can't delete others' dreams
+comment ajax isn't working
 
 To publish to heroku:
 
