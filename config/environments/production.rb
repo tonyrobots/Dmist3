@@ -38,7 +38,6 @@ Dream3::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Disable delivery errors, bad email addresses will be ignored
-  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :sendmail
   # Defaults to:
@@ -47,16 +46,15 @@ Dream3::Application.configure do
   #   :arguments => '-i -t'
   # }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'heroku.com' }
-  
+  #config.action_mailer.default_url_options = { :host => 'heroku.com' }
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :domain => "dreamerist.com",
-    :user_name =>  ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :authentication => 'plain',
-    :enable_starttls_auto => true
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
   }
   
 
