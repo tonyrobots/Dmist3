@@ -6,15 +6,6 @@ gem 'rails', '3.1.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-# old-school devise/omniauth
-#gem 'devise', '1.4.7'
-#gem "oa-oauth", :require => "omniauth/oauth"
-
-# devise 1.5.x/omniauth
-#gem 'devise', '1.5.3'
-#gem 'omniauth'
-#gem 'omniauth-facebook'
-
 # devise 2.0.x/omniauth
 gem 'devise'
 gem 'omniauth'

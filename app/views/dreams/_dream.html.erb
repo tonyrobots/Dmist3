@@ -2,7 +2,7 @@
 <td align=center>
 	<%= avatar_thumb_linked_with_username(dream.user_id) %>
 </td>
-<td><b><%= link_to(dream.title, dream) %></b>
+<td><b><%= link_to(dream.title, dream) %></b><br />
 	<i>(<%=h time_ago_in_words(dream.created_at) %> ago)</i>
 	
 	<% 	if current_user_is?(dream.user_id) || (current_user && current_user.role == User::ADMIN) %>

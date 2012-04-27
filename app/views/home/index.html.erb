@@ -23,14 +23,14 @@
 		</ul>
 		<div id="tabs-1">
 			<div id="latest">
-				<table>
+				<table width="100%">
 				<%= render @recent_dreams  %>
 				</table>
 				<%= link_to "more dreams", dreams_path, :class => "right" %>
 			</div>
 		</div>
 		<div id="tabs-2">
-			<table>
+			<table width="100%">
 			<%= render @top_rated_dreams %>
 			</table>
 		</div>
@@ -48,5 +48,7 @@
 		<div id="feeling_value"><%= @feeling_median %>&deg; </div>
 		<a href="#" onClick="alert('What\'s the dream weather? Lower temps mean more nightmares lately, higher means more sweet ones!');">what's this?</a>
 	</div>
+
+	
 	<fb:like-box href="http://www.facebook.com/pages/Dreamerist/160487977327137" width="292" height="400" connections="10" stream="true" header="true"></fb:like-box>
 </div>
