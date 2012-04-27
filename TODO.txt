@@ -11,3 +11,32 @@ set up mailers (i.e. for forgotten password)
 To publish to heroku:
 
 git push heroku-cedar master (don't forget to heroku run rake db:migrate --app dreamerist !)
+
+What is Dreamerist?
+Dreamerist is a place for people to share their dreams. 
+
+<!--Why would I want to record my dreams?
+Over the years I've written down and saved some of my more vivid dreams, and I'm really glad I did. I only wish I were able to remember them long enough to get them down more often. I believe getting into the habit of journaling my dreams (on Dreamerist, natch,) will help.
+-->
+
+Why would I want to do that?
+Why not? When you wake up after a particularly powerful or unnerving dream, don't you want to give your person a shake and tell them all about it? Aren't they sometimes poetic in their beauty, subtlety, extravagance, strangeness? Dreams are the purest form of expression that exists, your mind's nightly status report to your consciousness, processed only through the morning's frantic filter. Let's have fun with them.
+
+Other people's dreams are boring.
+Oh that old saw? Yawn. You're boring, boring. 
+
+Hey, that's mean.
+Sorry, it's just a sensitive subject around here. Besides, you don't have to read other people's dreams -- there's still plenty for you here, and we hope you'll stick around. Putting aside the value of having a centralized digital repository for your own dreams, there'll be a lot of other interesting stuff to explore once we get a few (thousand) dreams in the DB*. 
+
+So Dreamerist is just an online dream journal?
+Right now, yes. Which we think is actually pretty cool. Besides that, we're hoping to foster a strong, supportive community of people sharing their innermost selves in a safe, smart environment. But ultimately, as I just mentioned, the thing that really gets us excited about Dreamerist is this question: 
+
+What kinds of patterns might emerge when we are able to look at dream data in aggregate? 
+
+I imagine a sort of psychic weathermap of the globe: is there a nightmare front coming in from the NW? Why the sudden spike in Sweden of sex dreams? How does dreaming correlate with seasons or other cycles? Imagine waking up on Election Day after a dream about Obama (like I did in 2008,) and being able to see *all* the other dreams about Obama (which I could not, though they did do a segment about Obama dreams on the radio. Apparently, there were a lot of, ahem, risque ones.) 
+
+As time goes on we will create some of these visualizations, and open up an API so that other clever people can create their own. 
+
+* That's "Dreambank," naturally. 
+
+

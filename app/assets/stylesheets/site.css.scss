@@ -19,10 +19,10 @@ h3 {
 	}
 	
 
-
 fieldset {
 	background: #d6e5f4;;
 }
+
 legend {
 	color: #fff;
 	background: #151361;
@@ -36,12 +36,13 @@ legend {
 	background: #fff;
 	margin-top: 75px;
 	padding-left: 30px;
+	padding-top: 90px;
 	-webkit-border-radius: 20px; -moz-border-radius: 20px;
 }
 
 #logo {
-	position: relative;	
-	top: -59px;
+	position: absolute;	
+	top: 12px;
 }
 
 #logotype {
@@ -55,13 +56,10 @@ legend {
 }
 
 #login_box {
-	position: absolute;
 	font-size:10pt;
-	top: 12px;
-	left: 700px;
 	width:280px;
 	height: 50px;
-	background: #fff;
+	background: #ccc;
 	-webkit-border-radius: 5px; -moz-border-radius: 5px;
 	padding: 5px;
 }
