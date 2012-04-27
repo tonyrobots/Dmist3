@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @dreams = Dream.where(:visible => TRUE, :private => FALSE).limit(7)
+    @recent_dreams = Dream.where(:visible => TRUE, :private => FALSE).limit(7)
+    @top_rated_dreams = Dream.where(:visible=> TRUE, :private => FALSE).limit(5)
     # TODO add featured dream logic
     @featured_dream = Dream.first
 

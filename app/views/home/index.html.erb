@@ -16,11 +16,26 @@
 	</tr>
 	</table> -->
 	
-	<div id="latest">
-	<h3>Latest dreams:</h3>
-	<%= render :partial => "dreams/dreamlist", :dreams => @dreams  %>
-	<%= link_to "more dreams", dreams_path, :class => "right" %>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Recent Dreams</a></li>
+			<li><a href="#tabs-2">Top Rated Dreams</a></li>
+		</ul>
+		<div id="tabs-1">
+			<div id="latest">
+				<table>
+				<%= render @recent_dreams  %>
+				</table>
+				<%= link_to "more dreams", dreams_path, :class => "right" %>
+			</div>
+		</div>
+		<div id="tabs-2">
+			<table>
+			<%= render @top_rated_dreams %>
+			</table>
+		</div>
 	</div>
+		
 </div>
 
 <div id="rightcolumn">

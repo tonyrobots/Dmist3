@@ -1,4 +1,5 @@
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 
@@ -14,5 +15,9 @@ $(document).ready(function() {
     event.preventDefault(); // Prevent link from following its href
   });
 });
+
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
 
 

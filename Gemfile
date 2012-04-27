@@ -21,6 +21,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'jquery-rails'
+gem 'rails-asset-jqueryui'
 gem 'acts-as-taggable-on'
 gem 'paperclip'
 gem "kaminari"  
