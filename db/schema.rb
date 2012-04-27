@@ -39,14 +39,16 @@ ActiveRecord::Schema.define(:version => 20120427034057) do
     t.string   "title"
     t.text     "body"
     t.date     "date"
-    t.boolean  "visible",                                      :default => true
+    t.boolean  "visible",                                                      :default => true
     t.boolean  "explicit"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "feeling",                                      :default => 50
-    t.boolean  "private",                                      :default => false
-    t.decimal  "rating_average", :precision => 6, :scale => 2, :default => 0.0
+    t.integer  "feeling",                                                      :default => 50
+    t.boolean  "private",                                                      :default => false
+    t.decimal  "rating_average_writing",         :precision => 6, :scale => 2, :default => 0.0
+    t.decimal  "rating_average_weirdness",       :precision => 6, :scale => 2, :default => 0.0
+    t.decimal  "rating_average_interestingness", :precision => 6, :scale => 2, :default => 0.0
   end
 
   create_table "invites", :force => true do |t|
