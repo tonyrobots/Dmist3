@@ -8,4 +8,4 @@ comment ajax isn't working
 
 To publish to heroku:
 
-git push heroku-cedar master
+git push heroku-cedar master (don't forget to heroku run rake db:migrate --app dreamerist !)

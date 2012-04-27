@@ -46,6 +46,8 @@
 		<%= ratings_for @dream, :dimension => :weirdness %>
 		<b>Writing:</b><br />
 		<%= ratings_for @dream, :dimension => :writing %>
+		
+		<p>rated by <%= @dream.raters("interestingness") %></p>
 
 	</div>
 	<div id="commentarea">

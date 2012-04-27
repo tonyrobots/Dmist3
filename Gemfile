@@ -44,6 +44,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 group :development, :test do
     gem 'unicorn'
 	gem 'sqlite3', '~> 1.3.4'
+	#gem 'mysql2', '~> 0.3.7' 
 end
 
 group :production do
