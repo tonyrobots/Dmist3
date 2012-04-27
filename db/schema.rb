@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120420030044) do
+ActiveRecord::Schema.define(:version => 20120427034057) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -39,13 +39,14 @@ ActiveRecord::Schema.define(:version => 20120420030044) do
     t.string   "title"
     t.text     "body"
     t.date     "date"
-    t.boolean  "visible",    :default => true
+    t.boolean  "visible",                                      :default => true
     t.boolean  "explicit"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "feeling",    :default => 50
-    t.boolean  "private",    :default => false
+    t.integer  "feeling",                                      :default => 50
+    t.boolean  "private",                                      :default => false
+    t.decimal  "rating_average", :precision => 6, :scale => 2, :default => 0.0
   end
 
   create_table "invites", :force => true do |t|
