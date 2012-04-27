@@ -47,7 +47,10 @@
 		<b>Writing:</b><br />
 		<%= ratings_for @dream, :dimension => :writing %>
 		
-		<p>rated by <%= @dream.raters("interestingness") %></p>
+		<p>rated by 
+		<% @dream.raters("interestingness").each do |rater| %>
+				<%= rater.username %> 
+		<% end %></p>
 
 	</div>
 	<div id="commentarea">
