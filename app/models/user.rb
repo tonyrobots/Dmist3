@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   has_many :comments, :as => :commentable  
   
   # use paperclip for avatars
-   has_attached_file :avatar,  :styles => { :large => "325x325>", :medium => "200x200>", :thumb => "48x48#" },
+   has_attached_file :avatar,  :styles => { :large => "300x300>", :medium => "200x200>", :thumb => "48x48#" },
                                            :path => "/avatars/:id/:style_:id.:extension",
                                            :default_style => :thumb,
                                            :default_url => "/assets/avatars/:style_missing.png",

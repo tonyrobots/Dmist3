@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   def index
     @recent_dreams = Dream.where(:visible => TRUE, :private => FALSE).limit(7)
-    @top_rated_dreams = Dream.where(:visible=> TRUE, :private => FALSE).limit(5)
+    @most_interesting_dreams = Dream.order("rating_average_interestingness DESC").limit(7)
+    @best_written_dreams = Dream.order("rating_average_writing DESC").limit(7)
+    @weirdest_dreams = Dream.order("rating_average_weirdness DESC").limit(7)
+    
     # TODO add featured dream logic
     @featured_dream = Dream.first
 
