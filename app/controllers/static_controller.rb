@@ -6,7 +6,7 @@ class StaticController < ApplicationController
   caches_page :show
 
   def show
-    valid = %w(splash)
+    valid = %w(splash about)
     if valid.include?(params[:path])
       render :template => File.join('static', params[:path])
     else
