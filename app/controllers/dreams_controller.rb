@@ -43,6 +43,7 @@ class DreamsController < ApplicationController
   def show
     @commentable = @dream = Dream.find(params[:id])
     @comments = @dream.comments.all
+    @raters = @dream.raters("interestingness")
     @comment = Comment.new
     @dream_tag = @dream.tags.build
     @title = @dream.title + " - on Dreamerist"

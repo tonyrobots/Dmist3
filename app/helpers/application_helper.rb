@@ -20,6 +20,19 @@ module ApplicationHelper
     end
   end
   
+  def listUsers(users, limit=20)
+    linked_users = []
+    more = users.count - limit
+    for user in users[0..limit-1]
+      linked_users.push link_to user.username.html_safe, user_path(user)
+    end
+    linked_users = linked_users * ', ' 
+    linked_users += " and " + more.to_s + " more." if more > 0
+    return linked_users
+  end
+  
+  
+  
   # TODO DRY up these two helpers? 
   
   def avatar_thumb_linked_with_username(user_id, options = {})
