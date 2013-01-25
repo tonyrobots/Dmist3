@@ -1,4 +1,3 @@
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
 	<h1><%=h @dream.title %></h1>
 	<div id="contentcolumn">
 	<i>by  
@@ -36,7 +35,7 @@
 		<%=	link_to(image_tag("delete.png", :border =>0,  :alt => "Delete Dream"), @dream, :method => :delete) %>
 		<%= image_tag("private.png", :alt => "This dream is private! Only you can see it") if @dream.private %>
 	<%	end %>
-	<p><!--broken<fb:like></fb:like>--></p>
+	<p>    <div class="fb-like" data-send="true" data-width="266" data-show-faces="false" data-font="lucida grande"></div></p>
 	<div id="ratings" >
 		<% unless current_user %><b> You must be <%= link_to "logged in", new_user_session_path %> to rate dreams!</b><% end %>
 		<h3>Ratings:</h3>
