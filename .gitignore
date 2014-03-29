@@ -5,3 +5,4 @@ log/*.log
 tmp/
 .sass_cache/
 public/assets/
+config/s3.yml
