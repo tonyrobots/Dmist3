@@ -6,3 +6,4 @@ tmp/
 .sass_cache/
 public/assets/
 config/s3.yml
+config/facebook.yml
